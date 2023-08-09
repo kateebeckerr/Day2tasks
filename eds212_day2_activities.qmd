@@ -36,3 +36,32 @@ df_da
 a <- 1.2
 eval(df_da)
 ```
+
+Make a penguin plot
+
+```{r}
+#ggplot of penguin bill length vs. bill depth with point color dependent on species , update labels, add a title 
+
+library(tidyverse)
+library(palmerpenguins)
+
+view(penguins)
+
+ggplot(data=penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + 
+  geom_point(aes(color = species)) +
+  scale_color_manual(values = c("pink", "yellow", "blue")) +
+  labs (x = "Bill Length (mm)",
+        y = "Bill Depth (mm)", 
+        title = "Relationship between Bill LEngth and Bill Depth in Palmer PEnguins")
+```
+
+## Jitter Plot
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm))+
+  geom_jitter(aes(color = species)) +
+  scale_color_manual(values = c("green", "orange", "purple")) +
+  labs (x = "Species",
+        y = "Bill Length (mm)", 
+        title = "Relationship between Bill Length and Species in Palmer PEnguins")
+```
