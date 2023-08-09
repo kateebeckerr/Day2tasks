@@ -11,3 +11,28 @@ library(tidyverse)
 library(palmerpenguins)
 
 ```
+
+```{r}
+#find derivative expression and slope at the indicated value fpr each of the fucntions 
+#find slope of f(x) = x^2 at x=3
+ex_1 <- expression(x^2)
+my_deriv <- deriv(ex_1, "x")
+my_deriv
+```
+
+```{r}
+x <- 3
+eval(my_deriv)
+```
+
+```{r}
+fa <-expression(2*(3*a+2)^4 - 5)
+df_da <-D(fa, 'a')
+df_da
+
+```
+
+```{r}
+a <- 1.2
+eval(df_da)
+```
