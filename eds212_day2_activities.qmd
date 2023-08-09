@@ -1,0 +1,13 @@
+---
+title: "Day 2 Task comps"
+format: html
+editor: visual
+---
+
+## Derivatives for Tasks 
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+```
